@@ -1,5 +1,6 @@
 import fs from 'fs' // Use fs package
 import bmpJs from 'bmp-js' // Use bmp-js package
+import { callbackify } from 'util';
 
 const bmpBuffer = fs.readFileSync('maskTemplate.bmp') // Import bmp image
 const bmpData = bmpJs.decode(bmpBuffer) // Decode bmp image to bmpData
@@ -13,4 +14,4 @@ for (let i = 0; i < bmpData.data.length / 4; i++) { // For every four values (fo
     }
 }
 
-fs.writeFileSync('data.txt', colorValues); // Write the byets to data.txt
+fs.writeFileSync('data.txt', colorValues, 'ascii'); // Write the byets to data.txt
