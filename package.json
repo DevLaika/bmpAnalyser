@@ -13,6 +13,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "bmp-js": "^0.1.0",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "image-decode": "^1.2.2"
   }
 }
